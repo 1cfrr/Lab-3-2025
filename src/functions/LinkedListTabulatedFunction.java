@@ -240,7 +240,7 @@ public class LinkedListTabulatedFunction implements TabulatedFunction{
         if (index<0||index>=pointsCount){
             throw new functions.FunctionPointIndexOutOfBoundsException("Введённый индекс выходит за границы набора точек или меньше нуля");
         }
-        deleteNodeByIndex(index-1);
+        deleteNodeByIndex(index);
     }
 
     public void addPoint(functions.FunctionPoint point) throws functions.InappropriateFunctionPointException {

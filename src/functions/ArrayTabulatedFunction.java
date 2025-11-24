@@ -143,7 +143,7 @@ public class ArrayTabulatedFunction implements TabulatedFunction{
         if (index<0||index>=pointsCount){
             throw new FunctionPointIndexOutOfBoundsException("Введённый индекс выходит за границы набора точек или меньше нуля");
         }
-        System.arraycopy(points,index,points,index-1,pointsCount-index);
+        System.arraycopy(points,index+1,points,index,pointsCount-index-1);
         points[pointsCount-1]=null;
         pointsCount--;
     }
