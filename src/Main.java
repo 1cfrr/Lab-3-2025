@@ -64,21 +64,29 @@ class lab_3 {
             System.out.printf("f%d: (%.3f; %.3f)%n", i + 1, function.getPointX(i), function.getPointY(i));
         }
 
-        System.out.println("\nЗамена точки с номером 3 на точку f = (4,sqrt(4))");
-        test_point = new FunctionPoint(4, Math.sqrt(4));
-        System.out.printf("Исходная точка: f3'= (%.3f; %.3f)%n", function.getPointX(2), function.getPointY(2));
-        function.setPoint(2, test_point);
-        System.out.printf("Измененная точка: f3'= (%.3f; %.3f)%n", function.getPointX(2), function.getPointY(2));
+        System.out.println("\nУдаление точки с индексом 0:");
+        System.out.printf("Точка f1 = (%.3f, %.3f)%n", function.getPointX(0), function.getPointY(0));
+        function.deletePoint(0);
         System.out.println("Точки функции:");
         for (int i = 0; i < function.getPointsCount(); i++) {
             System.out.printf("f%d: (%.3f; %.3f)%n", i + 1, function.getPointX(i), function.getPointY(i));
         }
 
-        System.out.println("\nЗамена точки с номером 6 по значению x = 9,5");
-        System.out.printf("Исходная точка: f6'= (%.3f; %.3f)%n", function.getPointX(5), function.getPointY(5));
-        function.setPointX(5, 9.5);
-        function.setPointY(5, Math.sqrt(9.5));
-        System.out.printf("Измененная точка: f6'= (%.3f; %.3f)%n", function.getPointX(5), function.getPointY(5));
+        System.out.println("\nЗамена точки с номером 2 на точку f = (4,sqrt(4))");
+        test_point = new FunctionPoint(4, Math.sqrt(4));
+        System.out.printf("Исходная точка: f2= (%.3f; %.3f)%n", function.getPointX(1), function.getPointY(1));
+        function.setPoint(1, test_point);
+        System.out.printf("Измененная точка: f2= (%.3f; %.3f)%n", function.getPointX(1), function.getPointY(1));
+        System.out.println("Точки функции:");
+        for (int i = 0; i < function.getPointsCount(); i++) {
+            System.out.printf("f%d: (%.3f; %.3f)%n", i + 1, function.getPointX(i), function.getPointY(i));
+        }
+
+        System.out.println("\nЗамена точки с номером 5 по значению x = 9,5");
+        System.out.printf("Исходная точка: f5= (%.3f; %.3f)%n", function.getPointX(4), function.getPointY(4));
+        function.setPointX(4, 9.5);
+        function.setPointY(4, Math.sqrt(9.5));
+        System.out.printf("Измененная точка: f5= (%.3f; %.3f)%n", function.getPointX(4), function.getPointY(4));
         System.out.println("Точки функции:");
         for (int i = 0; i < function.getPointsCount(); i++) {
             System.out.printf("f%d: (%.3f; %.3f)%n", i + 1, function.getPointX(i), function.getPointY(i));

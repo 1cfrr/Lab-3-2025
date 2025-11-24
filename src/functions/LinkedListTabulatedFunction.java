@@ -157,11 +157,11 @@ public class LinkedListTabulatedFunction implements TabulatedFunction{
         return pointsCount;
     }
 
-    public functions.FunctionPoint getPoint(int index){
+    public FunctionPoint getPoint(int index){
         if (index<0||index>=pointsCount){
             throw new functions.FunctionPointIndexOutOfBoundsException("Введённый индекс выходит за границы набора точек или меньше нуля");
         }
-        return getNodeByIndex(index).point;
+        return new FunctionPoint(getNodeByIndex(index).point);
     }
 
     public void setPoint(int index, functions.FunctionPoint point) throws functions.InappropriateFunctionPointException {
